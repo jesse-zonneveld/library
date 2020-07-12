@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="styles/reset.css" type="text/css">
+    <link rel="stylesheet" href="styles/style.css" type="text/css">
+    <title>My Library</title>
+</head>
+
+<body>
+    <h1>My Library</h1>
+    <div class="lightbox">
+        <form class="new-book-info">
+            <label for="title">Book Title:</label>
+            <input name="title" id="title" type="text">
+
+            <label for="author">Author:</label>
+            <input name="author" id="author" type="text">
+
+            <label for="pages">Number of Pages:</label>
+            <input name="pages" id="pages" type="text">
+
+            <label for="read">Have you read this already?</label>
+            <input name="read" type="checkbox">
+
+            <button type="submit">Add to Library</button>
+        </form>
+    </div>
+    <div class="container">
+        <div class="title">Harry Potter</div>
+        <div class="author">JK Rolling</div>
+        <div class="pages">340</div>
+        <div class="read">Done
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </div>
+    <button class="addBook">Add Book</button>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

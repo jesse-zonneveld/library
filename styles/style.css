@@ -1,7 +1,14 @@
 body {
     height: 1000px;
     font-family: 'Roboto', sans-serif;
+    font-size: 17px;
     color: #fff;
+    background: #f4f4f4;
+}
+
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
 }
 
 .heading-container {
@@ -22,11 +29,17 @@ h1 {
     text-transform: uppercase;
 }
 
+h2 {
+    font-size: 36px;
+    text-align: center;
+}
+
 .library {
     max-width: 80%;
-    margin: auto;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: auto;
 }
 
 .book {
@@ -35,11 +48,17 @@ h1 {
     justify-content: space-evenly;
     max-width: 200px;
     padding: 20px;
-    margin: 50px;
+    margin-top: 50px;
     background-image: url(../images/blue-book.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 250px;
+    transition: all 0.3s;
+}
+
+.book:hover {
+    box-shadow: 0px 0px 17px black;
+    transform: scale(1.1);
 }
 
 .book:nth-child(even) {
@@ -53,11 +72,22 @@ h1 {
 .lightbox {
     visibility:hidden;
     position:absolute;
-    background:red;
-    border:2px solid #3c3c3c;
+    background: #f4f4f4;
+    color: black;
+    border: 10px solid #fff;
     z-index:100;
-    width: 200px;
-    padding:20px;
+    width: 300px;
+    padding: 20px 50px 40px 50px;
+}
+
+.new-book-info {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.new-book-info > * {
+    flex-basis: 100%;
+    padding: 10px;
 }
 
 .dimmer{
@@ -156,11 +186,25 @@ input:checked + .slider:before {
 
 .delete {
     border: 3px solid #fff;
-    padding: 5px 40px;
+    padding: 1px 40px;
     background: none;
     color: #fff;
 }
 
-.button:hover {
+button {
+    transition: all 0.3s;
+}
+
+button:hover {
     background: rgba(255, 255, 255, 0.315);
+    transform: scale(1.1);
+}
+
+.add-to-lib {
+    border: 3px solid rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+    padding: 10px 40px;
+    background: none;
+    font-size: 17px;
+    margin-top: 20px;
 }

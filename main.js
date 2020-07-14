@@ -12,18 +12,20 @@ libraryContainer.addEventListener('click', toggleRead);
 
 function displayPopup() {
     lightbox.style.visibility = 'visible';
-    lightbox.style.top = window.innerHeight / 2 - 50 + 'px';
-    lightbox.style.left = window.innerWidth / 2 - 100 + 'px';
+    lightbox.style.top = window.innerHeight / 2 - 250 + 'px';
+    lightbox.style.left = window.innerWidth / 2 - 200 + 'px';
     
     dimmer.style.width = window.innerWidth + 'px';
-    dimmer.style.height = window.innerHeight + 'px';
+    dimmer.style.height = window.innerHeight + 30 + 'px';
     dimmer.className = 'dimmer';
     document.body.appendChild(dimmer);
+    document.body.classList.add('stop-scrolling');
 
     dimmer.addEventListener('click', (e) => {
         if (!e.target.parentElement.matches('body') || e.target === null) return;
         lightbox.style.visibility = 'hidden';
         document.body.removeChild(dimmer);
+        document.body.classList.remove('stop-scrolling');
     });
 }
 
